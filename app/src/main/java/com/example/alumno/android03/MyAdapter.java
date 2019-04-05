@@ -32,11 +32,13 @@ public class MyAdapter extends RecyclerView.Adapter <MyViewHolder> {
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
-        TextView tvNombre = (TextView)holder.itemView.findViewById(R.id.tvNombre);
-        TextView tvApellido = (TextView)holder.itemView.findViewById(R.id.tvApellido);
+        //TextView tvNombre = (TextView)holder.itemView.findViewById(R.id.tvNombre);
+        //TextView tvApellido = (TextView)holder.itemView.findViewById(R.id.tvApellido);
         Persona p = this.personas.get(position);
-        tvNombre.setText(p.getNombre());
-        tvApellido.setText(p.getApellido());
+        //tvNombre.setText(p.getNombre());
+        //tvApellido.setText(p.getApellido());
+        holder.tvNombre.setText(p.getNombre());
+        holder.tvApellido.setText(p.getApellido());
     }
 
     @Override
