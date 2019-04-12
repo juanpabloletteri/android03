@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,5 +32,15 @@ public class MainActivity extends AppCompatActivity {
         //layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvPersona.setLayoutManager(layoutManager);
 
+        ///////boton agregar
+        MyListener listenerControlador = new MyListener();
+        Button btnAgregar = (Button)this.findViewById(R.id.btnAgregar);
+
+        btnAgregar.setOnClickListener(listenerControlador);
     }
+
+    public void llamar(int index){
+
+    }
+
 }
